@@ -1,5 +1,3 @@
-import { PDFFormat } from 'puppeteer';
-
 type downloadType = 'jpeg' | 'png' | 'pdf';
 
 export interface ITranslationContext {
@@ -7,8 +5,9 @@ export interface ITranslationContext {
     content?: string;
     width?: number;
     height?: number;
-    format?: PDFFormat;
+    format?: any;
     raw?: boolean;
+    selector?: string;
 }
 
 export const TranslationDefaults : ITranslationContext = {
